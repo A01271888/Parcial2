@@ -1,0 +1,15 @@
+<h2> Lista de Examenes </h2>
+
+<ul>
+  {{#each model as |test|}}
+    {{form-test test=test}}
+    {{#link-to 'detalles-examen' test.id}}<button> Detalles </button>{{/link-to}}
+    <hr>
+  {{/each}}
+</ul>
+
+<button {{action 'nuevo'}}> Nuevo Examen </button>
+<br><br>
+{{#if show}}
+  {{form-test}}
+{{/if}}

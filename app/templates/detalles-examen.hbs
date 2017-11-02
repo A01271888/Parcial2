@@ -1,0 +1,15 @@
+<h2> Detalles {{model.nombre}} </h2>
+{{form-test test=model}}
+<p> Preguntas:  </p>
+
+<ul>
+  {{#each model.questions as |pregunta|}}
+    {{#if pregunta}}
+      {{form-question question=pregunta}}
+    {{else}}
+      {{form-question-nueva question=pregunta}}
+    {{/if}}
+  {{/each}}
+</ul>
+
+<button {{action 'agregar'}}> Agregar Pregunta </button>

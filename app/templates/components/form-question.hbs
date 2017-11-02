@@ -1,0 +1,9 @@
+Nombre: {{input type="Text" value=question.nombre}}  <br>
+
+<ul>
+  {{#each question.options as |option|}}
+      {{form-option option=option}}
+  {{/each}}
+</ul>
+
+<hr>

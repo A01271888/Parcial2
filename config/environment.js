@@ -30,6 +30,15 @@ module.exports = function(environment) {
     // ENV.APP.LOG_TRANSITIONS = true;
     // ENV.APP.LOG_TRANSITIONS_INTERNAL = true;
     // ENV.APP.LOG_VIEW_LOOKUPS = true;
+    
+    ENV.firebase = {
+      apiKey: "AIzaSyDNm1daryluTCMBoGACDJhYhsigZn98WAA",
+      authDomain: "examenesember.firebaseapp.com",
+      databaseURL: "https://examenesember.firebaseio.com",
+      projectId: "examenesember",
+      storageBucket: "",
+      messagingSenderId: "753106487420"
+    }
   }
 
   if (environment === 'test') {
