@@ -5,12 +5,27 @@ export default Controller.extend({
   actions:{
     nuevo(){
       //this.show = true;
-      // var test = this.store.createRecord('test', {
-      //   id: 2,
-      //   nombre: "Desarrollo WEB",
-      //   fecha: "10-12-2011"});
-      // test.save();
-      // console.log(test);
+      var test = this.store.createRecord('test', {
+        nombre: "Exam",
+        fecha: "02-11-2017",
+        
+        // questions: [
+        //   {
+        //     nombre: "",
+        //     options: [
+        //       {},{},{},{}
+        //     ]
+        //   },
+        //   {
+        //     nombre: "",
+        //     options: [
+        //       {},{},{},{}
+        //     ]
+        //   }
+        // ]
+      });
+      test.save();
+      console.log(test);
     }
   }
 });
