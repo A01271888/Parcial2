@@ -1,0 +1,18 @@
+Nombre: {{input id="nombre" type="text" value=model.nombre}}
+<br>
+Fecha: {{input type="text" value=model.fecha}}
+<br>
+
+<p> Preguntas:  </p>
+
+<ul>
+  {{#each model.questions as |pregunta|}}
+      {{form-question question=pregunta}}
+  {{/each}}
+</ul>
+
+<button {{action 'agregar'}}> Agregar Pregunta </button>
+
+<hr>
+
+<button {{action 'guardar'}}> Guardar </button>

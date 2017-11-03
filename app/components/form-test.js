@@ -2,8 +2,9 @@ import Component from '@ember/component';
 
 export default Component.extend({
   actions: {
-    borrar(id){
-      alert("Borrando..." + id);
+    borrar(){
+      this.get('test').destroyRecord();
+      // this.get('test')
     },
     // nuevo(){
     //   var test = this.store.createRecord('test', {
