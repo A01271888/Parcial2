@@ -1,0 +1,5 @@
+{{#if new}}
+  {{input type="checkbox" checked=option.correcta}} {{input type="text" value=option.nombre}}
+{{else}}
+  {{input type="checkbox" checked=option.correcta disabled=true}} {{option.nombre}}
+{{/if}}

@@ -1,19 +1,17 @@
 Nombre:
 {{#if question.isNew}}
-  {{input type="Text" value=question.nombre}}
-{{else}}
-  {{question.nombre}}
-{{/if}}
-<button {{action 'quitar'}}> Quitar </button>
-<br>
-<ul>
-  {{#each question.options as |option|}}
-    {{#if option.correcta}}
-      {{input type="checkbox" checked=true disabled=true}} {{input type="text" value=option.nombre}}
-    {{else}}
-      {{input type="checkbox" checked=false disabled=true}} {{input type="text" value=option.nombre}}
-    {{/if}}
-  {{/each}}
-</ul>
 
-<hr>
+  {{input type="Text" value=question.nombre}} <button {{action 'quitar'}}> Quitar </button>
+  {{#each question.options as |option|}}
+    {{form-option new=true option=option}}
+  {{/each}}
+
+{{else}}
+
+  {{question.nombre}}<button {{action 'quitar'}}> Quitar </button>
+  {{#each correctOption as |option|}}
+    {{form-option new=false option=option}}
+  {{/each}}
+
+{{/if}}
+<br>
